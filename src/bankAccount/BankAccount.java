@@ -1,12 +1,8 @@
 package bankAccount;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.InputMismatchException;
-import java.util.List;
-import java.util.Map;
 import java.util.Scanner;
-import java.util.stream.Stream;
+
 
 public class BankAccount extends Person {
 	private static int accountNum =0;
