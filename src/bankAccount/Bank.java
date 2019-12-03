@@ -42,7 +42,7 @@ public class Bank extends BankAccount {
 				System.out.println("*	(4)  Delete account"+"   					 *");
 				System.out.print("******************************************************************");
 				System.out.println(" ");
-				menuerrors(); 
+				menuErrors(); 
 				int m = kb1.nextInt();
 				switch(m) {
 				case 1:
@@ -161,7 +161,7 @@ public class Bank extends BankAccount {
 			}	
 		}while(done == false);
 	}
-	public void menuerrors() {
+	public void menuErrors() {
 		boolean done = false;
 		do {
 			try {	
