@@ -48,7 +48,7 @@ public class Person {
 	}
 
 	public String toString() {
-		String str = " First Name & Last Name: "+ firstname  + " , "  +lastname+ "\n"+" Social Security: "+SSN+"\n"    +  " Address: "+address;
+		String str = " First Name & Last Name: "+ firstname  + ", "  +lastname+ "\n"+" Social Security: "+SSN+"\n"    +  " Address: "+address;
 		return str;
 	}
 	public void read(Scanner kb){
@@ -61,7 +61,7 @@ public class Person {
 				lastname=kb.nextLine();
 				System.out.print("Enter Address: ");
 				address=kb.nextLine();
-				System.out.print("Enter SSN");
+				System.out.print("Enter SSN: ");
 				SSN=kb.nextInt();
 				done = true;
 			}catch(InputMismatchException e) {
@@ -70,7 +70,7 @@ public class Person {
 			}
 			done = true;
 		}while(done == false);
-		//kb.close();
+	
 	}
 
 

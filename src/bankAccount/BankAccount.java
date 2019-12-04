@@ -72,9 +72,9 @@ public class BankAccount extends Person {
 		}else if(getBalance() <w){
 			System.out.print("ERROR! you cant withdraw more than what you have ");
 		}else{
-			System.out.println("Successfully withdrawal "+w);
-			//System.out.print("Current Balance: " );
-			setBalance(getBalance()-w);
+			System.out.println("Successfully withdrawal of "+ w + " dollars.");
+			setBalance(getBalance() - w);
+			System.out.print("Current Balance: " + getBalance());
 		}
 	}
 	public String toString(){

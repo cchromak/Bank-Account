@@ -80,6 +80,7 @@ public class Bank extends BankAccount {
 
 		AccountList.add(b);
 		System.out.println("Thank you for creating an account with us!");
+		System.out.println("Your account number is " + b.getAccountNumber());
 		System.out.println("Press any number to return to the main menu");
 	}
 
@@ -88,7 +89,6 @@ public class Bank extends BankAccount {
 		Scanner kb1 = new Scanner(System.in);
 		System.out.println("Enter your account number ");
 		int kb = kb1.nextInt();
-		//kb = kb - 1;
 		kb1.nextLine();
 		for(int j = 0;j<AccountList.size();j++) {
 			if(AccountList.get(j).getAccountNumber()==kb) {
