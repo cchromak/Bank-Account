@@ -77,7 +77,6 @@ public class BankAccount extends Person {
 			setBalance(getBalance()-w);
 		}
 	}
-	// Note to self always spell toString() with a capital S because in abstract collections this caused an error in displaying
 	public String toString(){
 		String str ="Account Number: "+  this.getAccountNumber()+ "\n" +super.toString()+ "\n"+" Current balance: "+"$"+balance+"\n";
 		return str;

@@ -5,28 +5,23 @@ import java.util.InputMismatchException;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
-/*
- * Methods: 
- * The first time you create an account a primary holder should be specified. 
- * delete an account (given the accountNumber or the name of the primary holder
- * Delete an account: ask for the account number. 
- */
+
 public class Bank extends BankAccount {
 
-	// BankAccount Accountlist is an array that has stored inside BankAccount and person, This will be used often
+	
 	private ArrayList<BankAccount> AccountList = new ArrayList<>();
 
 	public Bank(){
 
 	}
-	// Setter and getters for the BankAccount Accountlist
+	
 	public ArrayList<BankAccount> getAccountList() {
 		return AccountList;
 	}
 	public void setAccountList(ArrayList<BankAccount> accountList) {
 		AccountList = accountList;
 	}
-	// Main Menu for the BankAccount
+	
 	public void menu(BankAccount B) {
 		boolean a = false;
 		B = new BankAccount();
@@ -34,13 +29,17 @@ public class Bank extends BankAccount {
 			try {
 
 				Scanner kb1 = new Scanner(System.in);
-				System.out.println("******************************************************************");
-				System.out.println("*Press the following button that corresponds to the given option:*");
-				System.out.println("*	(1)  Create account"+"  					 *");
-				System.out.println("*	(2)  Display account"+" 					 *");
-				System.out.println("*	(3)  Modify account"+"   					 *");
-				System.out.println("*	(4)  Delete account"+"   					 *");
-				System.out.print("******************************************************************");
+				System.out.println(" _________________________________");
+				System.out.println("|                                 |");
+				System.out.println("|    Hi, welcome to your bank!    |");
+				System.out.println("| What would you like to do today?|");
+				System.out.println("|_________________________________|");
+				System.out.println("|                                 |");
+				System.out.println("|	(1)  Create account"+"  	  |");
+				System.out.println("|	(2)  Display account"+" 	  |");
+				System.out.println("|	(3)  Modify account"+"   	  |");
+				System.out.println("|	(4)  Delete account"+"   	  |");
+				System.out.print("|_________________________________|");
 				System.out.println(" ");
 				menuErrors(); 
 				int m = kb1.nextInt();
@@ -92,15 +91,12 @@ public class Bank extends BankAccount {
 		//kb = kb - 1;
 		kb1.nextLine();
 		for(int j = 0;j<AccountList.size();j++) {
-			// WITHDRAW ,DEPOIST AND PAYINTREST ALL WORK however when the nextline occurs enter integers for some reason it wouldnt work 
 			if(AccountList.get(j).getAccountNumber()==kb) {
 				try {
 					System.out.println("(1) - Withdraw");
 					System.out.println("(2) - Deposit ");
 					System.out.println("(3) - Set Intrest_rate");
 					System.out.println("(Any number) - Go Back");
-					// The i is for the switch statement
-					// the w is the float
 					int i =kb1.nextInt();
 					int w = kb1.nextInt();
 					kb1.nextLine();
